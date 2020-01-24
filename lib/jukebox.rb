@@ -38,7 +38,10 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def 
+def run
+  puts "Please enter a command:"
+end
+
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
