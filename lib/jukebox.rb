@@ -23,8 +23,8 @@ def play(songs)
     if song_request.to_i - 1 == idx 
       puts "Playing #{songs[idx]}"
       included = true
-    elsif songs.include?(song_request)
-      puts "#{song}"
+    elsif song_request == song
+      puts "#{songs[idx]}"
       included = true
     end
   end
