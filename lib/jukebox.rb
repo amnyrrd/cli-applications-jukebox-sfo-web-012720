@@ -38,7 +38,7 @@ end
 
 def run
   puts "Please enter a command:"
-  command = gets.strip
+  command = gets.downcase.strip
   if command != 'exit'
     if command == 'list'
       list(songs)
