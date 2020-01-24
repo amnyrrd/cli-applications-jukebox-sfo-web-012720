@@ -38,6 +38,14 @@ end
 
 def run
   puts "Please enter a command:"
+  command = gets.strip
+  if command != 'exit'
+    if command == 'list'
+      list(songs)
+    elsif command 
+      
+     end
+  end
 end
 
 songs = [
