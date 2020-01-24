@@ -18,17 +18,15 @@ def play(songs)
   puts "Please enter a song name or number:"
   song_request = gets.strip
   included = false
-  
   songs.each_with_index do | song, idx |
     if song_request.to_i - 1 == idx 
       puts "Playing #{songs[idx]}"
       included = true
-    elsif songs.include?(song_request)
+    elsif song_request == song
       puts "#{songs[idx]}"
       included = true
     end
   end
-  
   if included == false 
     puts "Invalid input, please try again"
   end
@@ -36,6 +34,22 @@ end
 
 def exit_jukebox 
   puts "Goodbye"
+end
+
+def run(input)
+  puts "Please enter a command:"
+  command = gets.downcase.strip
+  if command != 'exit'
+    if command == 'list'
+      list(input)
+    elsif command == 'play'
+      play(input)
+    elsif command == 'help'
+      help
+     end
+   elsif command == 'exit'
+    exit_jukebox
+  end
 end
 
 songs = [
