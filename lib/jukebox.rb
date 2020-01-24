@@ -18,7 +18,6 @@ def play(songs)
   puts "Please enter a song name or number:"
   song_request = gets.strip
   included = false
-  
   songs.each_with_index do | song, idx |
     if song_request.to_i - 1 == idx 
       puts "Playing #{songs[idx]}"
@@ -28,7 +27,6 @@ def play(songs)
       included = true
     end
   end
-  
   if included == false 
     puts "Invalid input, please try again"
   end
