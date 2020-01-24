@@ -41,9 +41,9 @@ def run(input)
   command = gets.downcase.strip
   if command != 'exit'
     if command == 'list'
-      list(songs)
+      list(input)
     elsif command == 'play'
-      play(songs)
+      play(input)
     elsif command == 'help'
       help
      end
