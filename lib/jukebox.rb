@@ -24,7 +24,7 @@ def play(songs)
       puts "Playing #{songs[idx]}"
       included = true
     elsif songs.include?(song_request)
-      puts "#{songs[idx]}"
+      puts "#{song}"
       included = true
     end
   end
